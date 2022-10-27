@@ -1,5 +1,5 @@
 const request = require('supertest');
-const { validate } = require('uuid');
+const { validate, v4 } = require('uuid');
 
 const app = require('../');
 
@@ -9,7 +9,7 @@ describe('Users', () => {
       .post('/users')
       .send({
         name: 'John Doe',
-        username: 'johndoe'
+        username: 'johndoe',
       })
     expect(201);
 
